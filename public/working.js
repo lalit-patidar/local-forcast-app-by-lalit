@@ -46,7 +46,7 @@ form.addEventListener("submit", (e) => {
     
 
 
-   fetch('http://localhost:9000/forcast?latitude='+ latitude +'&longitude='+ longitude).then((response) => {
+   fetch('/forcast?latitude='+ latitude +'&longitude='+ longitude).then((response) => {
        response.json().then((data) => {
          var b = "sunny"
         function creatImg() {

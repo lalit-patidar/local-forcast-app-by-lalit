@@ -4,6 +4,7 @@ const express = require('express');
 const emport = require('./forcast/forcast')
 
 const app = express();
+const port = process.env.PORT || 9000
 
 const publicDirectoryPath = path.join(__dirname, '../public');
 app.use(express.static(publicDirectoryPath));
@@ -33,4 +34,4 @@ app.get('/forcast', (req, res) => {
 
 })
 
-app.listen(9000, () => { console.log('server running...') })
+app.listen(port, () => { console.log('server running...', port) })
